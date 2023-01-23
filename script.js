@@ -57,18 +57,9 @@ function descriptografar() {
 }
 
 
- btnCopiar.addEventListener('click', (e) => {
-            navigator.clipboard.writeText(textoCodificado.value);
-            alert('Texto copiado com sucesso! Clique CTRL+V em algum local para colar.');
+btnCopiar.addEventListener('click', function(event) {   textoCodificado.select();
+            alert('Texto copiado com sucesso!');
         });
-
-        btnColar.addEventListener('click', async (e) => {
-            const resposta = await navigator.clipboard.readText();
-
-           
-            entradaMensagem.value = resposta;
-        });
-
         
 
 btn.addEventListener("click", function() {
