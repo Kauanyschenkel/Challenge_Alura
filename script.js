@@ -61,12 +61,10 @@ btnCopiar.addEventListener('click', function(event) {   textoCodificado.select()
             alert('Texto copiado com sucesso!');
         });
         
-
-btn.addEventListener("click", function() {
-    
-    location.reload();
-});
-
+btnColar.addEventListener('click', async (e) => {
+  const resposta = await navigator.clipboard.readText();
+            entradaMensagem.value = resposta;
+        });
 
 botaoCriptografar.onclick = criptografar
 botaoDescriptografar.onclick = descriptografar
